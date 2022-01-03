@@ -11,20 +11,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <div id="header">
+        <button id="home_btn" class="header_btn">Home</button>
+        <button id="blog_btn" class="header_btn">Blog</button>
+        <button id="projects_btn" class="header_btn">Projects</button>
+        <button id="resume_btn" class="header_btn">Resume</button>
+        <button id="contact_btn" class="header_btn">Contact Me</button>
+    </div>
+
     <div id="app">
         <div id="container">
-            <div id="header">Home</div>
             
-            <div id="bio">About me</div>
+            <div id="bio">
+                <div id="bio_photo_and_about_me">
+                    <div id="bio_photo"></div>
+                    <div id="about_me">About me</div>
+                </div>
+                <div id="twitter_embed"></div>
 
             <div id="projects">Projects</div>
 
             <div id="photos">Photos</div>
 
-            <div id="footer"></div>
-        
+            </div>
         </div>
     </div>
+
+    <div id="footer"></div>
 
     <!-- Import App -->
     <script src="./main.js"></script>
