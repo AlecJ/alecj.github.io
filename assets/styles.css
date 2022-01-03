@@ -1,0 +1,57 @@
+body {
+  background-color: #f2f2f2;
+  margin: 0px;
+  font-family: tahoma;
+}
+
+#app {
+  width: 100vw;
+  /* height: 100vh; */
+  /* background-color: aqua; */
+}
+
+/* */
+#container {
+  width: 100%;
+  height: 100%;
+  max-width: 750px;
+  /* max-height: 1000px; */
+  background-color: white;
+
+  display: grid;
+}
+
+#header {
+  width: 100%;
+  height: 4em;
+
+  background-color: red;
+}
+
+#bio {
+  width: 100%;
+  height: 300px;
+
+  background-color: green;
+}
+
+#projects {
+  width: 100%;
+  height: 500px;
+
+  background-color: yellow;
+}
+
+#photos {
+  width: 100%;
+  height: 100px;
+
+  background-color: orange;
+}
+
+#footer {
+  width: 100%;
+  height: 50px;
+
+  background-color: grey;
+}
