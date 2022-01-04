@@ -79,8 +79,8 @@ Bio Styling
 */
 
 #bio {
-  width: inherit;
-  height: 300px;
+  width: 100%;
+  min-height: 300px;
 
   display: grid;
   grid-template-columns: 3fr 1fr;
