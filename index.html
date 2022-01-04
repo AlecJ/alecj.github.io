@@ -24,10 +24,17 @@
             
             <div id="bio">
                 <div id="bio_photo_and_about_me">
-                    <div id="bio_photo"></div>
+                    <div id="bio_photo">
+                      <img v-bind:src="bio_photo_link">
+                    </div>
                     <div id="about_me">{{ about_me }}</div>
                 </div>
-                <div id="twitter_embed"></div>
+                <div id="twitter_embed">
+                  <div id="twitter_container">
+                    <a class="twitter-timeline" href="https://twitter.com/478eF595" data-tweet-limit="1" data-width="399" ></a>
+                    <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                </div>
 
             <div id="projects">Projects</div>
 
