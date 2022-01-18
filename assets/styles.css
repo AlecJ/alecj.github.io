@@ -86,17 +86,18 @@ Bio Styling
   /* padding: 15px; */
 
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+  grid-template-columns: minmax(240px, 1fr) minmax(240px, 300px);
 
   /* background-color: green; */
 }
 
 #bio_photo_and_about_me {
   width: 100%;
-  min-width: 400px;
+  /* min-width: 400px; */
 
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
 }
 
