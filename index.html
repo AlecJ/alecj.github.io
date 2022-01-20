@@ -27,7 +27,9 @@
                     <div id="bio_photo">
                       <img v-bind:src="bio_photo_link">
                     </div>
-                    <div id="about_me">{{ about_me }}</div>
+                    <div id="about_me">
+                      <p>{{ about_me }}</p>
+                    </div>
                 </div>
                 <div id="twitter_embed">
                   <div id="twitter_container">
@@ -42,7 +44,26 @@
 
             </div>
 
-            <div id="projects">Projects</div>
+            <div id="projects">
+              <div id="projects_label" class="header">
+                <div class="underline"></div>
+                <p>Latest Projects</p>
+                <div class="underline"></div>
+              </div>
+              <!-- There will be three projects shown, latest, second to latest, third to latest.
+              At the bottom will be a "see more" button to go to the projects page. -->
+              <div id="project_one">
+                <div id="project_one_pic">
+                  <img v-bind:src="project_one_photo_link" class="project_pic">
+                </div>
+                <div id="project_one_bio" class="project_bio">
+                  <p>{{ project_one_bio }}</p>
+                </div>
+              </div>
+              <div id="project_two"></div>
+              <div id="project_three"></div>
+              <div id="see_more_button"></div>
+            </div>
 
             <div id="photos">Photos</div>
         </div>
