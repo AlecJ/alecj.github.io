@@ -52,28 +52,31 @@
               <!-- There will be three projects shown, latest, second to latest, third to latest.
               At the bottom will be a "see more" button to go to the projects page. -->
               <div id="project_one" class="project">
-                <div id="project_one_pic">
+                <div id="project_one_pic" class="project_pic_container">
                   <img v-bind:src="project_one_photo_link" class="project_pic">
                 </div>
                 <div id="project_one_bio" class="project_bio">
+                  <h3>{{ project_one_name }}</h3>
                   <p>{{ project_one_bio }}</p>
                 </div>
               </div>
 
               <div id="project_two" class="project">
                 <div id="project_two_bio" class="project_bio">
+                  <h3>{{ project_one_name }}</h3>
                   <p>{{ project_one_bio }}</p>
                 </div>
-                <div id="project_two_pic">
+                <div id="project_two_pic" class="project_pic_container">
                   <img v-bind:src="project_one_photo_link" class="project_pic">
                 </div>
               </div>
 
               <div id="project_three" class="project">
-                <div id="project_three_pic">
+                <div id="project_three_pic" class="project_pic_container">
                   <img v-bind:src="project_one_photo_link" class="project_pic">
                 </div>
                 <div id="project_three_bio" class="project_bio">
+                  <h3>{{ project_one_name }}</h3>
                   <p>{{ project_one_bio }}</p>
                 </div>
 
@@ -84,7 +87,7 @@
             <div id="photos">
               <div id="photos_label" class="header">
                 <div class="underline"></div>
-                <p>Instragram</p>
+                <p>Instagram</p>
                 <div class="underline"></div>
               </div>
             </div>

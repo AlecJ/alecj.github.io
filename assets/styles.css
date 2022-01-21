@@ -10,7 +10,7 @@ body {
 }
 
 #app {
-  width: 100vw;
+  width: calc(100vw - 18px);
   /* height: 100vh; */
   /* background-color: aqua; */
 
@@ -126,6 +126,10 @@ Bio Styling
 
 }
 
+#about_me > p {
+  text-indent: 1.5em;
+}
+
 #twitter_embed {
   max-width: 320px;
   min-height: 300px;
@@ -141,6 +145,7 @@ Bio Styling
   background-color: lightblue;
   border-radius: 15px;
 }
+
 
 /*
 
@@ -182,19 +187,6 @@ Projects Styling
   border-bottom: 1px solid #000;
 }
 
-.project_pic {
-  width: 100%;
-  max-width: 550px;
-  height: auto;
-  padding: 0.5em;
-
-  border: 5px solid #555;
-}
-
-.project_bio {
-  padding: 1em;
-}
-
 .project {
   width: 100%;
   min-height: 400px;
@@ -204,6 +196,40 @@ Projects Styling
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-items: center;
   align-items: center;
+}
+
+.project_pic_container {
+  padding: 0.5em;
+  padding-right: 1.5em;
+}
+
+.project_pic {
+  width: 100%;
+  height: auto;
+  
+  padding: 6px;
+  border: 5px solid #555;
+}
+
+.project_bio {
+  padding: 1.5em;
+  padding-top: 0.5em;
+
+  text-align: center;
+}
+
+@media screen and (max-width: 639px) {
+  .project_bio {
+    grid-row-start: 1;
+  }
+
+  .project_pic_container {
+    padding-right: 2.5em;
+  }
+}
+
+.project_bio > p {
+  text-indent: 1.5em;
 }
 
 
