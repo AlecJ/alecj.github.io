@@ -2,6 +2,11 @@ My portfolio
 
 ## To Do
 
+* background color for projects
+* margin between projects
+* text indicitating click to see more
+* fix project image on small screens
+
 * block out projects
 * ipsem project
 * block out photos
