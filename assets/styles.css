@@ -146,6 +146,13 @@ Bio Styling
   border-radius: 15px;
 }
 
+@media screen and (max-width: calc(901px + 18px)) and (min-width: calc(600px + 18px)) {
+  #twitter_embed {
+    grid-column: span 2;
+  }
+}
+
+
 
 /*
 
@@ -218,7 +225,7 @@ Projects Styling
   text-align: center;
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: calc(639px + 18px)) {
   .project_bio {
     grid-row-start: 1;
   }

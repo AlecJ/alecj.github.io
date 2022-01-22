@@ -5,12 +5,12 @@ My portfolio
 * fix project image on small screens
 
 ## To Do
-* block out photos
 * restyle header
 * tweak spacing with pic and bio
 * projects - text indicating click to see more
 * projects - github link (just a github logo)
 * projects - link to site (if applicable)
+* youtube - video embed
 
 ## Header
 should resemble tabs somehow - page is pulled from right side of screen
