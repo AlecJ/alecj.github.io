@@ -37,7 +37,7 @@ Header and Header Buttons Styling
 */
 
 #header {
-  width: 100vw;
+  width: 100%;
   height: 3em;
 
   background-color: red;
@@ -276,8 +276,100 @@ Footer Styling
 */
 
 #footer {
-  width: 100vw;
+  width: 100%;
   height: 2em;
 
   background-color: grey;
+}
+
+
+
+/*
+
+Background Styling
+
+*/
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#beach {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  z-index: -4;
+
+  background-color: #f9e096;
+}
+
+.wave {
+  width: 150vw;
+  height: 150vh;
+  left: -25vw;
+  border-radius: 50%;
+  position: fixed;
+  animation-timing-function:ease-in-out;
+  /* cubic-bezier(.61,-0.6,.4,1.52) */
+  /* (1.0, 0, 0, 1.0) */
+  /* cubic-bezier(0.8, -0.4, 0.2, 1.4) */
+}
+
+#waveA {
+  top: 0vh;
+  z-index: -3;
+  background-color: #cff1ff;
+  animation: 8s infinite alternate waveAmotion;
+}
+
+#waveB {
+  top: 2vh;
+  z-index: -2;
+  background-color: #80daff;
+  animation: 8s infinite alternate waveBmotion;
+  animation-delay: 500ms;
+}
+
+#waveC {
+  top: 22vh;
+  z-index: -1;
+  background-color: #1ebeff;
+  animation: 8s infinite alternate waveCmotion;
+  animation-delay: 1000ms;
+}
+
+@keyframes waveAmotion {
+  from {
+    top: 0vh;
+  }
+  to {
+    top: 10vh;
+  }
+}
+
+@keyframes waveBmotion {
+  from {
+    top: 2vh;
+  }
+  to {
+    top: 25vh;
+  }
+}
+
+@keyframes waveCmotion {
+  from {
+    top: 22vh;
+
+  }
+  to {
+    top: 62vh;
+  }
 }
