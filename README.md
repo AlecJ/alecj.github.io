@@ -7,9 +7,11 @@ My portfolio
 ## To Do
 * restyle header
 * tweak spacing with pic and bio
-* projects - text indicating click to see more
+* projects - add new info
 * projects - github link (just a github logo)
 * projects - link to site (if applicable)
+
+* projects - text indicating click to see more
 * youtube - video embed
 
 ## Header
