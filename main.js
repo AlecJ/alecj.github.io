@@ -10,30 +10,5 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        // get_instagram_pics() {
-        //     //  hit the Instagram API for my photos
-        //     user_id = 7875044994
-        //     num_photos = 20
-
-        //     url = "https://api.instagram.com/v1/users/self/media/recent/?access_token={INSTRAGRAM_API_TOKEN}"
-
-        //     r = requests.get(url)
-        //     data = r.json().get('data', [])[0]
-
-        //     // TODO
-        //     // currently there is only one image returned. will break once the account has two or more photos
-                
-        //     // parse each photo
-        //     images = []
-        //     photo = {}
-        //     // for image in data:
-        //     // photo['url'] = image.get('images', {}).get('standard_resolution', {}).get('url')
-        //     // photo['caption'] = image.get('images', {}).get('caption', {}).get('text')
-        //     photo['url'] = data.get('images', {}).get('standard_resolution', {}).get('url')
-        //     photo['caption'] = data.get('caption', {}).get('text')
-        //     images.append(photo)
-
-        //     context = {'images': images}      
-        // }
     }
 })
