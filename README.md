@@ -1,16 +1,14 @@
 My portfolio
 
-* block out projects
-* background color for projects
-* fix project image on small screens
 
 ## To Do
 
-* restyle header
-
+* resizing project photos
 * projects - add new info
 * projects - github link (just a github logo)
 * projects - link to site (if applicable)
+
+* fix slight right margin issue
 
 * embed html from other document into div
 * extended page for de_bug

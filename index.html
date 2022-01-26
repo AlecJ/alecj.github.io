@@ -17,10 +17,10 @@
         <div id="container">
 
           <div id="header">
-            <button id="home_btn" class="header_btn">Home</button>
-            <button id="projects_btn" class="header_btn">Projects</button>
-            <button id="resume_btn" class="header_btn">Resume</button>
-            <button id="contact_btn" class="header_btn">Contact Me</button>
+            <a href="#app"><button id="home_btn" class="header_btn active">Home</button></a>
+            <button id="projects_btn" class="header_btn disabled">Projects</button>
+            <button id="resume_btn" class="header_btn active">Résumé</button>
+            <button id="contact_btn" class="header_btn active">Contact Me</button>
           </div>
             
             <div id="bio">
@@ -63,11 +63,11 @@
 
               <div id="project_two" class="project">
                 <div id="project_two_bio" class="project_bio">
-                  <h3>{{ project_one_name }}</h3>
-                  <p>{{ project_one_bio }}</p>
+                  <h3>{{ project_two_name }}</h3>
+                  <p>{{ project_two_bio }}</p>
                 </div>
                 <div id="project_two_pic" class="project_pic_container">
-                  <img v-bind:src="project_one_photo_link" class="project_pic">
+                  <img v-bind:src="project_two_photo_link" class="project_pic">
                 </div>
               </div>
 
