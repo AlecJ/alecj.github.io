@@ -59,6 +59,8 @@ body {
 
 
 
+
+
 /*
 
 Header and Header Buttons Styling
@@ -439,6 +441,14 @@ Background Styling
 
 */
 
+/* Disable background when hidden */
+@media screen and (max-width: calc(1200px + 14px)) {
+  #background {
+    display: none;
+  }
+}
+
+
 #background {
   width: 100vw;
   height: 100vh;
@@ -462,8 +472,10 @@ Background Styling
 
 .wave {
   width: 150vw;
+  min-width: 1600px;
   height: 150vh;
-  left: -25vw;
+  left: 50%;
+  transform: translateX(-50%);
   border-radius: 50%;
   position: fixed;
   /* cubic-bezier(.61,-0.6,.4,1.52) */

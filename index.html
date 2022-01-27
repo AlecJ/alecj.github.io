@@ -80,13 +80,13 @@
               <div id="project_three" class="project">
                 <div id="project_three_pic" class="project_pic_container">
                   <figure>
-                    <img v-bind:src="project_one_photo_link" class="project_pic mobile_disabled" @click="expandPicture(3)">
+                    <img v-bind:src="project_three_photo_link" class="project_pic mobile_disabled" @click="expandPicture(3)">
                     <figcaption  class="mobile_hidden">Click to enlarge</figcaption>
                   </figure>
                 </div>
                 <div id="project_three_bio" class="project_bio">
-                  <h3>{{ project_one_name }}</h3>
-                  <p>{{ project_one_bio }}</p>
+                  <h3>{{ project_three_name }}</h3>
+                  <p>{{ project_three_bio }}</p>
                 </div>
 
               </div>
@@ -121,8 +121,8 @@
             <figcaption>Click anywhere to dismiss</figcaption>
           </figure>
           <figure v-if="selected_img_id == 3">
-            <img  v-bind:src="project_one_photo_link">
-            <figcaption>{{ project_one_bio }}</figcaption>
+            <img  v-bind:src="project_three_photo_link">
+            <figcaption>{{ project_three_bio }}</figcaption>
             <figcaption>Click anywhere to dismiss</figcaption>
           </figure>
         </div>
