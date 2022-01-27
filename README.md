@@ -3,6 +3,9 @@ My portfolio
 
 ## To Do
 
+* vertical responsive (lightbox)
+* display none background for mobile
+
 * resizing project photos
 * projects - add new info
 * projects - github link (just a github logo)

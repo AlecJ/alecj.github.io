@@ -6,9 +6,9 @@ html {
 Disable smooth scrolling when users have prefers-reduced-motion enabled
  */
  @media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {
@@ -46,6 +46,17 @@ body {
   display: grid;
 }
 
+/* Disable certain elements, like click to enlarge photos, on mobile screens */
+@media screen and (max-width: calc(640px + 14px)) {
+  .mobile_disabled {
+    pointer-events: none;
+  }
+
+  .mobile_hidden {
+    display: none;
+  }
+}
+
 
 
 /*
@@ -72,9 +83,10 @@ Header and Header Buttons Styling
   position: fixed;
   top: 0;
   bottom: unset;
+  z-index: 1;
 }
 
-@media screen and (max-width: calc(599px + 18px)) {
+@media screen and (max-width: calc(600px + 14px)) {
   #header {
     position: fixed;
     top: unset;
@@ -232,7 +244,7 @@ Bio Styling
   border-radius: 15px; */
 }
 
-@media screen and (max-width: calc(901px + 18px)) and (min-width: calc(600px + 18px)) {
+@media screen and (max-width: calc(900px + 14px)) and (min-width: calc(600px + 14px)) {
   #twitter_embed {
     grid-column: span 2;
   }
@@ -292,28 +304,69 @@ Projects Styling
 }
 
 .project_pic_container {
-  padding: 0.5em;
-  padding-right: 1.5em;
+  /* padding: 0 0.5em 0 0.5em; */
+  /* padding-right: 1.5em; */
+  display: grid;
+  justify-items: center;
+  /* align-items: center; */
 }
 
 .project_pic {
   width: 100%;
   height: auto;
   
-  padding: 6px;
-  border: 5px solid #555;
-
-  transition:transform 0.25s ease;
-  transition:pos MAKE IT SO IT COVERS LEFT
+  /* padding: 6px; */
+  border: 3px solid #000;
 }
 
+.project_pic_container > figure > figcaption {
+  font-size: 0.8em;
+  text-align: center;
+}
 
-.project_pic:hover {
-  -webkit-transform:scale(1.75); /* or some other value */
-  transform:scale(1.75);
-  background-color: white;
-  position: relative;
-  left: -50%;
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 100vw;
+  width: calc(100vw - 14px);
+  height: 100vh;
+
+  background-color: rgba(49, 49, 49, 0.95);
+  z-index: 2;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+figure {
+  width: 95%;
+  /* height: 95%; */
+  max-height: 95%;
+  margin: 0;
+}
+
+#lightbox > figure > img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 250px);
+  /* padding: 0 5% 0 5%; */
+  object-fit: contain;
+}
+
+#lightbox > figure > figcaption {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-indent: 1.5em;
+  color: white;
+}
+
+#lightbox > figure > figcaption:nth-child(3) {
+  text-indent: unset;
+  text-align: center;
+  margin-top: 3em;
 }
 
 .project_bio {
@@ -323,14 +376,14 @@ Projects Styling
   text-align: center;
 }
 
-@media screen and (max-width: calc(639px + 18px)) {
+@media screen and (max-width: calc(640px + 14px)) {
   .project_bio {
     grid-row-start: 1;
   }
 
-  .project_pic_container {
+  /* .project_pic_container {
     padding-right: 2.5em;
-  }
+  } */
 }
 
 .project_bio > p {
