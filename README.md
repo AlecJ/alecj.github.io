@@ -3,15 +3,11 @@ My portfolio
 
 ## To Do
 
-* vertical responsive (lightbox)
-* display none background for mobile
+* contact me email:to
+* redacted resume on page
 
-* resizing project photos
-* projects - add new info
 * projects - github link (just a github logo)
 * projects - link to site (if applicable)
-
-* fix slight right margin issue
 
 * embed html from other document into div
 * extended page for de_bug
