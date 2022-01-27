@@ -53,7 +53,10 @@
               At the bottom will be a "see more" button to go to the projects page. -->
               <div id="project_one" class="project">
                 <div id="project_one_pic" class="project_pic_container">
-                  <img v-bind:src="project_one_photo_link" class="project_pic">
+                  <figure>
+                    <img v-bind:src="project_one_photo_link" class="project_pic mobile_disabled" @click="expandPicture(1)">
+                    <figcaption class="mobile_hidden">Click to enlarge</figcaption>
+                  </figure>
                 </div>
                 <div id="project_one_bio" class="project_bio">
                   <h3>{{ project_one_name }}</h3>
@@ -67,13 +70,19 @@
                   <p>{{ project_two_bio }}</p>
                 </div>
                 <div id="project_two_pic" class="project_pic_container">
-                  <img v-bind:src="project_two_photo_link" class="project_pic">
+                  <figure>  
+                    <img v-bind:src="project_two_photo_link" class="project_pic mobile_disabled" @click="expandPicture(2)">
+                    <figcaption  class="mobile_hidden">Click to enlarge</figcaption>
+                  </figure>
                 </div>
               </div>
 
               <div id="project_three" class="project">
                 <div id="project_three_pic" class="project_pic_container">
-                  <img v-bind:src="project_one_photo_link" class="project_pic">
+                  <figure>
+                    <img v-bind:src="project_one_photo_link" class="project_pic mobile_disabled" @click="expandPicture(3)">
+                    <figcaption  class="mobile_hidden">Click to enlarge</figcaption>
+                  </figure>
                 </div>
                 <div id="project_three_bio" class="project_bio">
                   <h3>{{ project_one_name }}</h3>
@@ -96,6 +105,26 @@
             </div>
 
             <div id="footer"></div>
+        </div>
+
+        <div id="lightbox"
+             :style="{ left: selected_img_id >= 1 && selected_img_id <= 3 ? '0vw' : '100vw' }"
+             @click="expandPicture()">
+          <figure v-if="selected_img_id == 1">
+            <img  v-bind:src="project_one_photo_link">
+            <figcaption>{{ project_one_bio }}</figcaption>
+            <figcaption>Click anywhere to dismiss</figcaption>
+          </figure>
+          <figure v-if="selected_img_id == 2">
+            <img  v-bind:src="project_two_photo_link">
+            <figcaption>{{ project_two_bio }}</figcaption>
+            <figcaption>Click anywhere to dismiss</figcaption>
+          </figure>
+          <figure v-if="selected_img_id == 3">
+            <img  v-bind:src="project_one_photo_link">
+            <figcaption>{{ project_one_bio }}</figcaption>
+            <figcaption>Click anywhere to dismiss</figcaption>
+          </figure>
         </div>
     </div>
 
