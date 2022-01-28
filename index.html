@@ -17,15 +17,24 @@
         <div id="container">
 
           <div id="header">
-            <a href="#app"><button id="home_btn" class="header_btn active">Home</button></a>
+            <a href="#app"
+               @click="show_or_hide_resume(false)">
+              <button id="home_btn" class="header_btn active">Home</button>
+            </a>
             <button id="projects_btn" class="header_btn disabled">Projects</button>
-            <button id="resume_btn" class="header_btn active">Résumé</button>
-            <button id="contact_btn" class="header_btn active">Contact Me</button>
+            <a href="#resume"
+               @click="show_or_hide_resume(true)">
+              <button id="resume_btn" class="header_btn active">Résumé</button>
+            </a>
+            <a href = "mailto: alecbjordan@gmail.com" target="_blank" rel="noopener noreferrer">
+              <button id="contact_btn" class="header_btn active">Contact Me</button>
+            </a>
           </div>
-            
+
+          <div id="home_content" v-show="!show_resume">
             <div id="bio">
               <div id="bio_photo">
-                <img v-bind:src="bio_photo_link">
+                <img :src="bio_photo_link">
               </div>
 
               <div id="about_me">
@@ -54,13 +63,16 @@
               <div id="project_one" class="project">
                 <div id="project_one_pic" class="project_pic_container">
                   <figure>
-                    <img v-bind:src="project_one_photo_link" class="project_pic mobile_disabled" @click="expandPicture(1)">
+                    <img :src="project_one_photo_link" class="project_pic mobile_disabled" @click="expandPicture(1)">
                     <figcaption class="mobile_hidden">Click to enlarge</figcaption>
                   </figure>
                 </div>
                 <div id="project_one_bio" class="project_bio">
                   <h3>{{ project_one_name }}</h3>
                   <p>{{ project_one_bio }}</p>
+                  <a :href="project_one_github_link" :alt="project_one_github_link" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/GitHub-Mark-120px-plus.png" class="project_icon" />
+                  </a>
                 </div>
               </div>
 
@@ -68,10 +80,13 @@
                 <div id="project_two_bio" class="project_bio">
                   <h3>{{ project_two_name }}</h3>
                   <p>{{ project_two_bio }}</p>
+                  <a :href="project_two_steam_link" :alt="project_two_steam_link" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/images/steamLogo.png" class="project_icon" />
+                  </a>
                 </div>
                 <div id="project_two_pic" class="project_pic_container">
                   <figure>  
-                    <img v-bind:src="project_two_photo_link" class="project_pic mobile_disabled" @click="expandPicture(2)">
+                    <img :src="project_two_photo_link" class="project_pic mobile_disabled" @click="expandPicture(2)">
                     <figcaption  class="mobile_hidden">Click to enlarge</figcaption>
                   </figure>
                 </div>
@@ -80,13 +95,21 @@
               <div id="project_three" class="project">
                 <div id="project_three_pic" class="project_pic_container">
                   <figure>
-                    <img v-bind:src="project_three_photo_link" class="project_pic mobile_disabled" @click="expandPicture(3)">
+                    <img :src="project_three_photo_link" class="project_pic mobile_disabled" @click="expandPicture(3)">
                     <figcaption  class="mobile_hidden">Click to enlarge</figcaption>
                   </figure>
                 </div>
                 <div id="project_three_bio" class="project_bio">
                   <h3>{{ project_three_name }}</h3>
                   <p>{{ project_three_bio }}</p>
+                  <div class="icon_group">
+                    <a :href="project_three_github_link" :alt="project_three_github_link" target="_blank" rel="noopener noreferrer">
+                      <img src="assets/images/GitHub-Mark-120px-plus.png" class="project_icon" />
+                    </a>
+                    <a :href="project_three_heroku_link" :alt="project_three_heroku_link" target="_blank" rel="noopener noreferrer">
+                      <img src="assets/images/herokuLogo.png" class="project_icon" />
+                    </a>
+                  </div>
                 </div>
 
               </div>
@@ -105,30 +128,36 @@
             </div>
 
             <div id="footer"></div>
-        </div>
+          </div>
 
+          <div id="resume" v-show="show_resume">
+            <iframe :src="resume_link" width="100%" height="100%">
+            </iframe>
+          </div>
+
+        </div>
+      
         <div id="lightbox"
-             :style="{ left: selected_img_id >= 1 && selected_img_id <= 3 ? '0vw' : '100vw' }"
-             @click="expandPicture()">
-          <figure v-if="selected_img_id == 1">
-            <img  v-bind:src="project_one_photo_link">
-            <figcaption>{{ project_one_bio }}</figcaption>
-            <figcaption>Click anywhere to dismiss</figcaption>
-          </figure>
-          <figure v-if="selected_img_id == 2">
-            <img  v-bind:src="project_two_photo_link">
-            <figcaption>{{ project_two_bio }}</figcaption>
-            <figcaption>Click anywhere to dismiss</figcaption>
-          </figure>
-          <figure v-if="selected_img_id == 3">
-            <img  v-bind:src="project_three_photo_link">
-            <figcaption>{{ project_three_bio }}</figcaption>
-            <figcaption>Click anywhere to dismiss</figcaption>
-          </figure>
+            :style="{ left: selected_img_id >= 1 && selected_img_id <= 3 ? '0vw' : '100vw' }"
+            @click="expandPicture()">
+        <figure v-if="selected_img_id == 1">
+          <img  :src="project_one_photo_link">
+          <figcaption>{{ project_one_bio }}</figcaption>
+          <figcaption>Click anywhere to dismiss</figcaption>
+        </figure>
+        <figure v-if="selected_img_id == 2">
+          <img :src="project_two_photo_link">
+          <figcaption>{{ project_two_bio }}</figcaption>
+          <figcaption>Click anywhere to dismiss</figcaption>
+        </figure>
+        <figure v-if="selected_img_id == 3">
+          <img  :src="project_three_photo_link">
+          <figcaption>{{ project_three_bio }}</figcaption>
+          <figcaption>Click anywhere to dismiss</figcaption>
+        </figure>
         </div>
+
     </div>
-
-
 
     <div id="background">
       <div id="beach"></div>

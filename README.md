@@ -2,20 +2,12 @@ My portfolio
 
 
 ## To Do
-
-* contact me email:to
-* redacted resume on page
-
-* projects - github link (just a github logo)
-* projects - link to site (if applicable)
-
+* react-router
 * embed html from other document into div
 * extended page for de_bug
 * projects - text indicating click to see more
 * slide out screen for 'see more'
-
-
-
+* projects page (grid view)
 * youtube - video embed
 
 ## Header

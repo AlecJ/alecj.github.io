@@ -43,8 +43,6 @@ body {
   /* 46px at top to account for fixed header at top of screen */
 
   background-color: white;
-
-  display: grid;
 }
 
 /* Disable certain elements, like click to enlarge photos, on mobile screens */
@@ -395,6 +393,18 @@ figure {
   text-indent: 1.5em;
 }
 
+.icon_group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 64px);
+  justify-content: center;
+  align-items: center;
+}
+
+.project_icon {
+  max-width: 2.5em;
+  margin: 0 0.5em 0 0.5em;
+}
+
 
 
 /*
@@ -434,6 +444,23 @@ Footer Styling
 
   color: white;
   background-color: #616161;
+}
+
+
+
+/*
+
+Resume Page Styling
+
+*/
+
+#resume {
+  width: 100vw;
+  height: calc(100vh - 46px);
+  max-width: 100%;
+  top: 46px;
+
+  overflow: hidden;
 }
 
 
