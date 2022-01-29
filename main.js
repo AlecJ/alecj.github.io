@@ -8,7 +8,7 @@ const app = Vue.createApp({
             bio_photo_link: 'assets/images/photo.jpg',
             project_one_name: "This Portfolio!",
             project_one_photo_link: 'assets/images/portfolio.png',
-            project_one_bio: "This site was built with VueJS. I wanted to learn Vue and sharpen my html/css skills. I also learned CSS Grid while making this site, in lieu of flexbox which I usually use. The main focuses were on creating a responsive site with CSS Grid (take a look at it in mobile!) and finally having a place to display my projects as I apply to jobs. I used some animations (header and background waves), embedded twitter and instagram, and made a lightbox viewer to expand project photos.",
+            project_one_bio: "This site was built with VueJS. I wanted to learn Vue and sharpen my html/css skills. I also learned CSS Grid while making this site, in lieu of flexbox which I usually use. The focuses were on creating a responsive site with CSS Grid (take a look at it in mobile!) and finally having a place to display my projects as I apply to jobs. I used some animations (header and background waves), embedded twitter and instagram, and made a lightbox viewer to expand project photos.",
             project_one_github_link: 'https://github.com/AlecJ/alecj.github.io',
             project_two_name: "De_Bug",
             project_two_photo_link: 'assets/images/de_bug.png',
