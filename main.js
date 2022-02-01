@@ -4,7 +4,7 @@ const app = Vue.createApp({
             
             about_me: "My name is Alec Jordan. I am a Full-Stack Developer. I like making youtube videos and web-apps, skiing, and playing video and board games with my friends! I graduated with a degree in Computer Science from Northeastern University in 2018. I'm skilled in Python, Flask, Django, Javascript, VueJS, ReactJS, and Docker. I'm also learning Unity and Level Design. ",
             resume_link: 'assets/Alec Jordan Resumé  (2022).pdf',
-            show_resume: false,
+            // show_resume: false,
             bio_photo_link: 'assets/images/photo.jpg',
             project_one_name: "This Portfolio!",
             project_one_photo_link: 'assets/images/portfolio.png',
@@ -30,10 +30,10 @@ const app = Vue.createApp({
                 this.selected_img_id = null;
             }
         },
-        show_or_hide_resume(bool) {
-            if (bool || !bool) {
-                this.show_resume = bool
-            }
-        }
+        // show_or_hide_resume(bool) {
+        //     if (bool || !bool) {
+        //         this.show_resume = bool
+        //     }
+        // }
     }
 })

@@ -22,8 +22,7 @@
               <button id="home_btn" class="header_btn active">Home</button>
             </a>
             <button id="projects_btn" class="header_btn disabled">Projects</button>
-            <a href="#resume"
-               @click="show_or_hide_resume(true)">
+            <a href="#" onclick="window.open('assets/Alec Jordan Resumé  (2022).pdf', '_blank'); return false;">
               <button id="resume_btn" class="header_btn active">Résumé</button>
             </a>
             <a href = "mailto: alecbjordan@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -31,7 +30,7 @@
             </a>
           </div>
 
-          <div id="home_content" v-show="!show_resume">
+          <div id="home_content">
             <div id="bio">
               <div id="bio_photo">
                 <img :src="bio_photo_link">
@@ -43,8 +42,6 @@
 
                 <div id="twitter_embed">
                   <div id="twitter_container">
-                    <!-- <a class="twitter-timeline" href="https://twitter.com/478eF595" data-tweet-limit="1" data-width="399" ></a>
-                    <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
                     <a class="twitter-timeline" href="https://twitter.com/478eF595?ref_src=twsrc%5Etfw">Tweets by 478eF595</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
                   </div>
@@ -128,11 +125,6 @@
             </div>
 
             <div id="footer"></div>
-          </div>
-
-          <div id="resume" v-show="show_resume">
-            <iframe :src="resume_link" width="100%" height="100%">
-            </iframe>
           </div>
 
         </div>
