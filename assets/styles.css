@@ -426,7 +426,6 @@ Photo Carousel Styling
 
 iframe.instagram-media {
   max-width: 800px !important;
-  width: 100% !important;
   min-width: auto !important;
 }
 
