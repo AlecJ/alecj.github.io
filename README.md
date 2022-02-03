@@ -2,7 +2,7 @@ My portfolio
 
 
 ## To Do
-* react-router
+* vue-router
 * embed html from other document into div
 * extended page for de_bug
 * projects - text indicating click to see more
