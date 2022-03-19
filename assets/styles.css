@@ -5,16 +5,16 @@ html {
 /*
 Disable smooth scrolling when users have prefers-reduced-motion enabled
  */
- @media screen and (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
   background-color: #f2f2f2;
 
-  font-family:"minion-pro",times,serif;
+  font-family: "minion-pro", times, serif;
   font-size: 1.2em;
 
   margin: 0;
@@ -56,8 +56,6 @@ body {
   }
 }
 
-
-
 /*
 
 Header and Header Buttons Styling
@@ -85,7 +83,7 @@ Header and Header Buttons Styling
   z-index: 1;
 }
 
-@media screen and (max-width:599px) {
+@media screen and (max-width: 599px) {
   #header {
     position: fixed;
     top: unset;
@@ -98,7 +96,6 @@ Header and Header Buttons Styling
   /* remove top margin */
   #container {
     margin: 0;
-    
   }
 
   /* 56px at bottom so navbar doesn't cover footer */
@@ -120,7 +117,7 @@ Header and Header Buttons Styling
   background-color: white;
 
   border-top: none;
-  border-bottom: none;
+  border-bottom: 1px solid #3f3f3f;
   border-left: 1px solid #3f3f3f;
   border-right: 1px solid #3f3f3f;
 
@@ -155,8 +152,6 @@ Header and Header Buttons Styling
 #contact_btn {
   justify-self: end;
 }
-
-
 
 /*
 
@@ -226,8 +221,6 @@ Bio Styling
   }
 }
 
-
-
 /*
 
 Projects Styling
@@ -258,7 +251,7 @@ Projects Styling
 .header > p {
   margin: 0;
   font-size: 2em;
-  font-family:"minion-pro",times,serif;
+  font-family: "minion-pro", times, serif;
 }
 
 .underline {
@@ -290,7 +283,7 @@ Projects Styling
 .project_pic {
   width: 100%;
   height: auto;
-  
+
   /* padding: 6px; */
   border: 3px solid #000;
 
@@ -386,8 +379,6 @@ figure {
   margin: 0 0.5em 0 0.5em;
 }
 
-
-
 /*
 
 Photo Carousel Styling
@@ -410,8 +401,6 @@ iframe.instagram-media {
   min-width: auto !important;
 }
 
-
-
 /*
 
 Footer Styling
@@ -426,8 +415,6 @@ Footer Styling
   background-color: #616161;
 }
 
-
-
 /*
 
 Background Styling
@@ -440,7 +427,6 @@ Background Styling
     display: none;
   }
 }
-
 
 #background {
   width: 100vw;
@@ -521,7 +507,6 @@ Background Styling
 @keyframes waveCmotion {
   from {
     top: 22vh;
-
   }
   to {
     top: 62vh;
